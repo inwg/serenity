@@ -1,3 +1,5 @@
+--github link: https://raw.githubusercontent.com/inwg/neverlose/refs/heads/main/ui/source.luau
+
 do
 	local Constant = 'L'..'P'..'H'..'_NO_VIRTUALIZE';
 	getfenv()[Constant] = getfenv()[Constant] or function(f) return f end;
@@ -199,7 +201,7 @@ NeverLose.GlobalLogo = "rbxassetid://86481543863908";
 NeverLose.ImageColorMapping = "rbxassetid://4155801252";
 
 if getcustomasset then
-	local link = "https://github.com/inwg/neverlose/blob/main/assets/%s?raw=true";
+	local link = "https://github.com/inwg/serenity/blob/main/assets/%s?raw=true";
 	local dir = 'NLAssets';
 
 	if not isfolder(dir) then
