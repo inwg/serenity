@@ -21,7 +21,7 @@ local function get_player_team(player)
     return nil
 end
 
-local NeverLose = loadstring(game:HttpGet("https://raw.githubusercontent.com/inwg/neverlose/refs/heads/main/ui/source.luau"))()
+local NeverLose = loadstring(game:HttpGet("https://raw.githubusercontent.com/inwg/serenity/refs/heads/main/ui/source.luau"))()
 
 local registry = {}
 local changedHandlers = {}
@@ -183,18 +183,18 @@ end)
 
 local Window = NeverLose:CreateWindow({
     Logo = NeverLose.GlobalLogo,
-    Name = "Neverluz",
+    Name = "Serenity",
     Content = "Bloxstrike",
     Size = NeverLose.Scales.Default,
-    ConfigFolder = "neverlose/bloxstrike",
+    ConfigFolder = "serenity/bloxstrike",
     Enable3DRenderer = false,
-    Keybind = "Insert",
+    Keybind = "RightShift",
 })
 
 Window:SetAccount({ Username = "Release" })
 
 local Watermark = Window:Watermark()
-Watermark:AddBlock("cube-vertexes", "Neverluz | Bloxstrike")
+Watermark:AddBlock("cube-vertexes", "Serenity | Bloxstrike")
 
 local Tabs = {
     Legit = Window:AddTab({ Name = "Legit", Icon = "crosshair" }),
