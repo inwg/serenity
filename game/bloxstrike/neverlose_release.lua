@@ -21,7 +21,7 @@ local function get_player_team(player)
     return nil
 end
 
-local NeverLose = loadstring(game:HttpGet("https://raw.githubusercontent.com/inwg/neverluz/refs/heads/main/ui/source.luau"))()
+local NeverLose = loadstring(game:HttpGet("https://raw.githubusercontent.com/inwg/neverlose/refs/heads/main/ui/source.luau"))()
 
 local registry = {}
 local changedHandlers = {}
