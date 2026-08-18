@@ -22,7 +22,7 @@ local function get_player_team(player)
 end
 
 
-local NeverLose = loadstring(game:HttpGet("https://raw.githubusercontent.com/inwg/neverlose/refs/heads/main/ui/source.luau"))()
+local NeverLose = loadstring(game:HttpGet("https://raw.githubusercontent.com/inwg/serenity/refs/heads/main/ui/source.luau"))()
 
 local registry = {}
 local changedHandlers = {}
@@ -184,18 +184,18 @@ end)
 
 local Window = NeverLose:CreateWindow({
     Logo = NeverLose.GlobalLogo,
-    Name = "Neverluz",
+    Name = "Serenity",
     Content = "Bloxstrike",
     Size = NeverLose.Scales.Default,
-    ConfigFolder = "neverlose/bloxstrike",
+    ConfigFolder = "serenity/beta/bloxstrike",
     Enable3DRenderer = false,
-    Keybind = "Insert",
+    Keybind = "RightShift",
 })
 
 Window:SetAccount({ Username = "Beta" })
 
 local Watermark = Window:Watermark()
-Watermark:AddBlock("cube-vertexes", "Neverluz | Bloxstrike")
+Watermark:AddBlock("cube-vertexes", "Serenity | Bloxstrike")
 
 local Tabs = {
     Legit = Window:AddTab({ Name = "Legit", Icon = "crosshair" }),
@@ -306,7 +306,7 @@ do
     local targets = { game:GetService("CoreGui") }
     if gethui then pcall(function() targets[#targets + 1] = gethui() end) end
     for _, container in ipairs(targets) do
-        for _, n in ipairs({ "NeverluzOverlay", "ESP_Highlight_Container", "Charms_Container", "JBEB_Indicator" }) do
+        for _, n in ipairs({ "SerenityOverlay", "ESP_Highlight_Container", "Charms_Container", "JBEB_Indicator" }) do
             local stale = container:FindFirstChild(n)
             if stale then pcall(function() stale:Destroy() end) end
         end
@@ -314,7 +314,7 @@ do
 end
 
 local UI = Instance.new("ScreenGui")
-UI.Name = "NeverluzOverlay"
+UI.Name = "SerenityOverlay"
 UI.IgnoreGuiInset = true
 UI.ResetOnSpawn = false
 UI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -544,9 +544,9 @@ end
 local function RunOnActor(func)
     local success = false
     pcall(function()
-        if not workspace:FindFirstChild("_NeverluzActors") then 
+        if not workspace:FindFirstChild("_SerenityActors") then 
             local af = Instance.new("Folder")
-            af.Name = "_NeverluzActors"
+            af.Name = "_SerenityActors"
             af.Parent = workspace 
         end
         task.defer(func)
