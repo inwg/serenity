@@ -1,3 +1,5 @@
+
+
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -6,22 +8,22 @@ local localPlayer = Players.LocalPlayer
 
 local NeverLose
 local success, err = pcall(function()
-    return loadstring(game:HttpGet("https://raw.githubusercontent.com/inwg/neverlose/refs/heads/main/ui/source.luau"))()
+    return loadstring(game:HttpGet("https://raw.githubusercontent.com/inwg/serenity/refs/heads/main/ui/source.luau"))()
 end)
 
 if success then
     NeverLose = err
-    print("NeverLose loaded successfully!")
+    print("Serenity loaded successfully!")
 else
-    warn("Failed to load NeverLose: " .. tostring(err))
+    warn("Failed to load Serenity: " .. tostring(err))
 end
 
 local Window = NeverLose:CreateWindow({
     Logo = NeverLose.GlobalLogo,
-    Name = "Neverlose",
+    Name = "Serenity",
     Content = "Prison Life",
     Size = NeverLose.Scales.Default,
-    ConfigFolder = "serenity",
+    ConfigFolder = "serenity/prisonlife",
     Enable3DRenderer = false,
     Keybind = "RightShift",
 })
@@ -29,7 +31,7 @@ local Window = NeverLose:CreateWindow({
 local Notification = NeverLose:CreateNotification()
 
 local Watermark = Window:Watermark()
-Watermark:AddBlock("sword", "Neverlose", NeverLose.GlobalLogo)
+Watermark:AddBlock("sword", "Serenity", NeverLose.GlobalLogo)
 
 Window.UserSettings:AddLabel("Watermark"):AddToggle({
     Default = true,
