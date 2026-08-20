@@ -13,9 +13,9 @@ local function kickPlayer(message)
             Text = message,
             Duration = 5
         })
+        ]]
         wait(2)
         game:Shutdown()
-    ]]
     end
 end
 
